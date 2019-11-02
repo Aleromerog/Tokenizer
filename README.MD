@@ -1,3 +1,3 @@
 # Tokenizer Project
 
-## This project is based on tokenize python grammar
+This project is based on python language
