@@ -2,7 +2,7 @@ from read_file import readFile
 
 logic_operators = ['==', '>' , '>=', '<', '<=', '!=']
 unary_operators = ['=', '+', '+=', '-', '-=']
-OP = ['(', ')', ':', ',']
+OP = ['(', ')', ':', ',', '[', ']']
 reserved_words = ['and', 'except', 'lambda', 'with', 'as', 'finally', 'nonlocal', 'while',
                   'assert', 'false', 'None','yield','break', 'for','not','class','from', 'or',
                   'continue','global','pass','def','if','raise','del', 'import', 'return','elif',
@@ -67,8 +67,11 @@ def main():
         
     
 
-    print(tokenList)
+    printList(tokenList)
 
+def printList(tokenList):
+    for token in tokenList:
+        print(token)
 
 if __name__== "__main__":
       main()
