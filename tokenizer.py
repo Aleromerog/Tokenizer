@@ -2,18 +2,19 @@ from read_file import readFile
 
 logic_operators = ['==', '>' , '>=', '<', '<=', '!=']
 unary_operators = ['=', '+', '+=', '-', '-=']
-OP = ['(', ')', ':', ',', '[', ']']
+OP = ['(', ')', ':', ',', '[', ']'] 
 reserved_words = ['and', 'except', 'lambda', 'with', 'as', 'finally', 'nonlocal', 'while',
                   'assert', 'false', 'None','yield','break', 'for','not','class','from', 'or',
                   'continue','global','pass','def','if','raise','del', 'import', 'return','elif',
                   'in','True','else','is','try']
+string_identifier = ["\'", '"']
 
 def main():
     #Lista de los tokens
     tokenList = []
     #Nombre del archivo
     file = readFile('demo.py')
-    #Variable para ir concatenando la cadena leída
+    #Variable para concatenar la cadena leída
     expretion = ''
     #Variable para concatenar un operador
     operators = ''
@@ -30,7 +31,7 @@ def main():
         else:
             operators = ''
         #En caso de que encuentre una apertura de cadena " ' ' " 
-        if c == "\'": 
+        if c in string_identifier: 
             if not isString:
                 isString = True
                 expretion += c

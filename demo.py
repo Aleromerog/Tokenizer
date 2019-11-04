@@ -1,4 +1,4 @@
 st = 1234
-somt = ['Banana']
+somt = ["Banana"]
 
 print(st)
