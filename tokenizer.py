@@ -21,7 +21,7 @@ def main():
     #Variable para identificar si es un string lo que se esta leyendo
     isString = False
     for c in file:
-        #Completar el operador y en caso de que sea de longitud mas de uno juntarlo
+        #Completar el operador y en caso de que sea de longitud más de uno juntarlo
         if operators != '':
             if c in logic_operators or c in unary_operators:
                 operators += c
